@@ -1,0 +1,84 @@
+const topmenu = $("nav ul li");
+const sections = $(".section");
+const speed = 100;
+//버튼 클릭해서 이동하기
+topmenu.click(function (e) {
+	e.preventDefault(); //#의 기본 기능을 차단
+	let target = $(this); //사용자가 클릭한 버튼의 타겟이 저장
+	let index = target.index(); //인덱스를 부여하여 저장
+	let section = $(".section").eq(index);
+	let offset = section.offset().top; //offset() : 요소의 위치(문서)
+	$("html, body").animate({ scrollTop: offset }, 2000, "easeOutCirc");
+});
+
+//스크롤이 됐을 때
+
+
+$(window).on("scroll", function () {
+	let scrollTop = $(window).scrollTop()
+	sections.each(function (i,o) {
+		if (scrollTop >= sections.eq(i).offset().top - speed) {
+			$("nav ul li").eq(i).addClass("active").siblings().removeClass("active");
+			sections.eq(i).find(".left").addClass("in");
+		}
+	})	
+})
+
+$(".hidden").hover(
+	function () {
+	  let ah=$(this).innerHeight();
+	  let img=$(this).find('img');
+	  let imgh=img.innerHeight();
+	  //console.log(`a높이:${ah} img높이:${imgh}`);
+	  img.stop().animate({top:ah-imgh},3000)
+	},
+	function () {
+	  let img = $(this).find("img")
+	  img.stop().animate({ top: 0 }, 3000);
+	}
+)
+setTimeout(() => {
+	const ChangeZone = document.querySelector(".Change");
+	var textone = "007";
+	var texttwo = "오은교";
+	var textCount = 0;
+	var turn = 1;
+	TextFirst = setInterval(TextShow, 200);
+	function TextShow() {
+	  if (turn == 1) {
+		if (textCount < Number(textone.length)) {
+		  text1 = ChangeZone.innerHTML + textone[textCount];
+		  ChangeZone.innerHTML = text1;
+		  textCount++;
+		} else {
+		  textCount = 0;
+		  clearInterval(TextFirst);
+		  ClearZone = setInterval(clearZone, 100);
+		  turn++;
+		}
+	  } else if (turn == 2) {
+		if (textCount < Number(texttwo.length)) {
+		  ChangeZone.innerHTML = ChangeZone.innerHTML + texttwo[textCount];
+		  textCount++;
+		} else {
+		  textCount = 0;
+		  clearInterval(TextFirst);
+		  ClearZone = setInterval(clearZone, 100);
+		  turn = 1;
+		}
+	  }
+	}
+	function clearZone() {
+	  const textZone = document.querySelector(".Change");
+	  if (Number(ChangeZone.innerHTML.length) > 0) {
+		var newText = "";
+		for (var i = 0; i < Number(textZone.innerHTML.length) - 1; i++) {
+		  newText += textZone.innerHTML[i];
+		}
+		textZone.innerHTML = String(newText);
+	  } else {
+		clearInterval(ClearZone);
+		TextFirst = setInterval(TextShow, 400);
+	  }
+	}
+}, 1000);
