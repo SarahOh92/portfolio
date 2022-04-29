@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body::-webkit-scrollbar{
-    width: 1.5em;
+    width: 10px;
     background: #ffffff; /* Old browsers */
     background: -moz-linear-gradient(top,  #ffead8 0%, #cc9872 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  #ffead8 0%,#cc9872 100%); /* Chrome10-25,Safari5.1-6 */
