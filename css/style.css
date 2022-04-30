@@ -11,7 +11,7 @@
     -webkit-backdrop-filter: blur(9.4px);
     border: 1px solid rgba(255, 255, 255, 0.58);
 }
-h1{
+/* h1{
     background: url(../images/logo.gif) no-repeat;
     width: 50%;
     height: 20%;
@@ -19,10 +19,62 @@ h1{
     background-size: contain;
     position: relative;
     left: 25%;
+} */
+.content {
+	position: relative;
+}
+
+.content a {
+	color: #fff;
+	font-size: 4em;
+	position: absolute;
+	transform: translate(121%, 130%);
+    display: block;
+}
+
+.content a:nth-child(1) {
+	color: transparent;
+    -webkit-text-stroke: 3px #333;
+}
+
+.content a:nth-child(2) {
+	color: #fff;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
 }
 .side_nav_area>ul{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 190px;
 }
 .side_nav_area>ul li{
     margin: 10px;
@@ -45,10 +97,6 @@ h1{
     text-align: center;
     line-height: 30px;
     position: relative;
-}
-.side_nav_area li a:hover {
-    color: #cc9872;
-    font-weight: bold;
 }
 .side_nav_area li a::before{
     content: '';
@@ -154,19 +202,62 @@ header{
     margin-bottom: 51px;
 }
 .main_info .txt_box .slogun>p span{
-    font-weight: bold;
-    display: inline-block;
-    background: linear-gradient(40deg,#3d3d3d,#cc9872) !important;
-    -webkit-background-clip: text !important;
     color: transparent;
+    font-weight: bold;
+    font-size: 6vmin;
+    line-height: 9vmin;
+    background: conic-gradient(
+      #ead2be 12%, 
+      #cc9872 12%, #cc9872 33%, 
+      #ccbd9d 33%, #ccbd9d 55%, 
+      #bd9696 55%, #bd9696 70%, 
+      #acbbce 70%, #acbbce 87%, 
+      #F7D1BA 87%);
+    background-size: 50%;
+    background-clip: text;  
+    -webkit-background-clip: text;
+    animation: expand-rev 0.5s ease forwards;
     cursor: pointer;
 }
-.main_info .txt_box .slogun>p span:hover{
+.main_info .txt_box .slogun>p span:hover {
+    animation: expand 0.5s ease forwards;
+  }
+  
+  @keyframes expand {
+    0% {
+      background-size: 25%;
+      background-position: 0 0;
+    }
+    20% {
+      background-size: 50%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 400%;
+      background-position: -10em -4em;
+    }
+  }
+  
+  @keyframes expand-rev {
+    0% {
+      background-size: 40%;
+      background-position: -10em -4em;
+    }
+    20% {
+      background-size: 50%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 25%;
+      background-position: 0 0;
+    }
+  }
+/* .main_info .txt_box .slogun>p span:hover{
     display: inline-block;
     background: linear-gradient(40deg,#cc9872,#fcd362) !important;
     -webkit-background-clip: text !important;
     color: transparent;
-  }
+  } */
 .main_info .title_area h2{
     font-size: 3rem;
 }
@@ -267,7 +358,7 @@ header{
     margin-top: 44px;
 }
 .about_me_box .profile_info li{
-    width: 446px;
+    width: 429px;
     font-size: 1rem;
 }
 .about_me_box .profile_info li>a{
@@ -278,7 +369,7 @@ header{
 }
 .about_me_box .profile_img_area{
     background: url(../images/aboutme.png) no-repeat;
-    width: 313px;
+    width: 337px;
     height: 340px;
     background-size: cover;
 }
@@ -574,6 +665,12 @@ div[role="progressbar"]::before {
 }
 .project2{
     background: #eee;
+    width: 100%;
+    height: 100vh;
+}
+.project3 {
+    width: 100%;
+    height: 100h;
 }
 .project3 .left .mockup_m{
     width: 297px;
@@ -592,6 +689,10 @@ div[role="progressbar"]::before {
 .project3 .left .mockup_m a.hidden iframe{
     width: 100%;
     height: 605px;
+}
+.project4{
+    width: 100%;
+    height: 100vh;
 }
 .project5{
     background: #f8f2ed;
@@ -686,7 +787,7 @@ div[role="progressbar"]::before {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-color: #f8f2ed;
+    background-color: #f4f4f4;
 }
 .contact_area .contact_box .contact_top{
     height: 70vh;

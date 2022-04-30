@@ -1,13 +1,12 @@
 const topmenu = $("nav ul li");
 const sections = $(".section");
 const speed = 100;
-//버튼 클릭해서 이동하기
 topmenu.click(function (e) {
-	e.preventDefault(); //#의 기본 기능을 차단
-	let target = $(this); //사용자가 클릭한 버튼의 타겟이 저장
-	let index = target.index(); //인덱스를 부여하여 저장
+	e.preventDefault();
+	let target = $(this); 
+	let index = target.index(); 
 	let section = $(".section").eq(index);
-	let offset = section.offset().top; //offset() : 요소의 위치(문서)
+	let offset = section.offset().top;
 	$("html, body").animate({ scrollTop: offset }, 2000, "easeOutCirc");
 });
 
