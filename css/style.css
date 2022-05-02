@@ -74,6 +74,7 @@
 .side_nav_area .copyright p{
     text-align: center;
     margin-top: 20px;
+    font-family: 'GmarketSansLight';
 }
 .side_nav_area li a{
     color: #333;
@@ -329,6 +330,9 @@ header{
     width: 429px;
     font-size: 1rem;
 }
+.about_me_box .profile_info li:last-child a span{
+    color: #cc9872;
+}
 .about_me_box .profile_info li>a{
     color: #333;
 }
@@ -395,6 +399,7 @@ header{
 .education_area .education_box .edu h5{
     margin-top: 50px;
     font-size: 1rem;
+    font-weight: normal;
 }
 .education_area .education_box .edu p{
     margin-top: 10px;
@@ -402,7 +407,7 @@ header{
 }
 .education_area .education_box .edu .txt_box{
     margin-top: 20px;
-    font-weight: lighter;
+    font-family: 'GmarketSansLight';
 }
 .about_area .education_area .education li{
     line-height: 20px;
@@ -438,17 +443,17 @@ header{
     height: 32px;
 }
 .education_area .prg_area .git{
-    background: url(../images/free-icon-github-5968810.png) no-repeat;
+    background: url(../images/github.png) no-repeat;
     width: 32px;
     height: 32px;
 }
 .education_area .prg_area .html{
-    background: url(../images/free-icon-html-274428.png) no-repeat;
+    background: url(../images/html.png) no-repeat;
     width: 32px;
     height: 32px;
 }
 .education_area .prg_area .css{
-    background: url(../images/free-icon-css-274422.png) no-repeat;
+    background: url(../images/css.png) no-repeat;
     width: 32px;
     height: 32px;
 }
@@ -655,7 +660,7 @@ div[role="progressbar"]::before {
     left: -15px;
     top: 137px;
 }
-.project5 .left .mockup_m a.hidden{
+.project5 .left .mockup_m div.hidden{
     display: block;
     width: 257px;
     height: 557px;
@@ -663,15 +668,16 @@ div[role="progressbar"]::before {
     overflow: hidden;
     top: 14px;
     left: 19px;
+    border-radius: 24px;
 }
-.project5 .left .mockup_m a.hidden iframe{
+.project5 .left .mockup_m div.hidden iframe{
     width: 100%;
     height: 605px;
 }
 .project5 .left .mockup_m_1 img{
-    width: 292px;
+    width: 290px;
     position: relative;
-    top: 135px;
+    top: 138px;
     left: 325px;
 }
 .contact_area {
@@ -740,7 +746,7 @@ div[role="progressbar"]::before {
 }
 .contact_area .contact_box .contact_bottom .contact_bottom_top p{
     color: #fff;
-    font-weight: lighter;
+    font-family: 'GmarketSansLight';
     margin-top: 14px;
 }
 .contact_area .contact_box .contact_bottom .contact_bottom_top .sns_area li a i{
@@ -754,6 +760,7 @@ div[role="progressbar"]::before {
 }
 .contact_area .contact_box .contact_bottom .contact_bottom_top .useful_link li{
     margin: 5px;
+    font-family: 'GmarketSansLight';
 }
 .contact_area .contact_box .contact_bottom .contact_bottom_top .useful_link li i{
     margin-right: 8px;
