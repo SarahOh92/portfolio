@@ -9,10 +9,6 @@ topmenu.click(function (e) {
 	let offset = section.offset().top;
 	$("html, body").animate({ scrollTop: offset }, 2000, "easeOutCirc");
 });
-
-//스크롤이 됐을 때
-
-
 $(window).on("scroll", function () {
 	let scrollTop = $(window).scrollTop()
 	sections.each(function (i,o) {

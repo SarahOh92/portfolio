@@ -264,7 +264,6 @@ header{
     transform: translateX(0);
 }
 .main_info .info_area .btn>a{
-    /* color: #333; */
     font-size: 1rem;
     letter-spacing: 1px;
 }
