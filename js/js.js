@@ -1,6 +1,6 @@
 const topmenu = $("nav ul li");
 const sections = $(".section");
-const speed = 100;
+const speed = 30;
 topmenu.click(function (e) {
 	e.preventDefault();
 	let target = $(this); 
@@ -24,12 +24,11 @@ $(".hidden").hover(
 	  let ah=$(this).innerHeight();
 	  let img=$(this).find('img');
 	  let imgh=img.innerHeight();
-	  //console.log(`a높이:${ah} img높이:${imgh}`);
-	  img.stop().animate({top:ah-imgh},3000)
+	  img.stop().animate({top:ah-imgh},2000)
 	},
 	function () {
 	  let img = $(this).find("img")
-	  img.stop().animate({ top: 0 }, 3000);
+	  img.stop().animate({ top: 0 }, 2000);
 	}
 )
 setTimeout(() => {
