@@ -38,6 +38,7 @@
 .side_nav_area>ul li{margin: 10px;}
 .side_nav_area hr{width: 30%;background-color: peachpuff;}
 .side_nav_area .copyright p{text-align: center;margin-top: 20px;}
+.side_nav_area .copyright p{text-align: center;margin-top: 20px;}
 .side_nav_area li a{color: #333;display: inline-block;padding: 10px;font-weight: bold;width: 150px;height: 30px;text-align: center;line-height: 30px;position: relative;}
 .side_nav_area li a::after{content: '';position: absolute;left: 5px;width: 150px;height: 2px;background: #3d3d3d;color: #cc9872;transform: scaleX(0);transition: all .5s;transform-origin: left;bottom: 0;}
 ul li.active a::after,ul li a:hover::after{transform: scaleX(1);}
@@ -47,6 +48,11 @@ ul li.active a::after,ul li a:hover::after{transform: scaleX(1);}
 .main_visual_area{width: 100vw;background-color: #fff9f7 !important;height: auto;}
 .main_visual_area>.inner{display: flex;align-items: flex-end;}
 .box{width: 50%;}
+header{width: 100%;}
+
+.main_visual_area{width: 100vw;background-color: #fff9f7 !important;height: auto;}
+.main_visual_area>.inner{display: flex;align-items: flex-end;}
+.main_visual_area .box{width: 50%;}
 .main_info .img_area{position: relative;width: 500px;}
 .main_info .img_area img{width: 100%;}
 .main_info .img_area img::after{content: '';background-color: transparent;position: absolute;}
@@ -142,6 +148,31 @@ ul li.active a::after,ul li a:hover::after{transform: scaleX(1);}
 .skills .skills_area ul{display: flex;flex-wrap: wrap}
 .skills .skills_area ul li{margin-right: 46px;margin-top: 27px;}
 .skills .skills_area ul li p{text-align: center;margin-top: 14px;font-size: 1rem;}
+.about_me_area .education_box{width: 60%;margin-top: 50px;}
+.about_me_area .education_area h4{color: #fff;padding-top: 10px;font-weight: 600;font-size: 1.125rem;}
+.about_me_area .education_area .edu_tit::after{content: '';display: block;width: 80%;height: 2px;border-radius: 30px;background: #fff;margin-top: 10px;}
+.skills_box{width: 40%;}
+.skills_box .skills_area .skills_tit::after{content: '';display: block;width: 100%;height: 2px;border-radius: 30px;background: #fff;margin-top: 10px;}
+.about_me_area .education_area .edu_content{margin-top: 10px;font-size: 1.2rem;}
+.education_area .education_box .edu{margin: 10px auto;font-weight: normal;}
+.education_area .education_box .edu h5{margin-top: 50px;font-size: 1rem;font-weight: normal;}
+.education_area .education_box .edu p{margin-top: 10px;font-size: 1rem;}
+.education_area .education_box .edu .txt_box{margin-top: 20px;font-family: 'GmarketSansLight';}
+.about_arabout_me_areaea .education_area .education li{line-height: 20px;color: #fff;}
+.education_area .prg_area .prg_tit::after{content: '';display: block;width: 100%;height: 2px;border-radius: 30px;background: #fff;margin-top: 10px;}
+.education_area .prg_area{margin-top: 50px;}
+.education_area .prg_area ul{margin-top: 28px;display: flex;}
+.education_area .prg_area ul li{margin-right: 20px;}
+.education_area .prg_area .ps{background: url(../images/free-icon-photoshop.png) no-repeat;width: 32px;height: 32px;}
+.education_area .prg_area .ill{background: url(../images/free-icon-illustrator.png) no-repeat;width: 32px;height: 32px;}
+.education_area .prg_area .git{background: url(../images/github.png) no-repeat;width: 32px;height: 32px;}
+.education_area .prg_area .html{background: url(../images/html.png) no-repeat;width: 32px;height: 32px;}
+.education_area .prg_area .css{background: url(../images/css.png) no-repeat;width: 32px;height: 32px;}
+.skills_box .skills_area {margin-top: 30px;}
+.skills_box .skills_area .skills_tit{padding-top: 10px;}
+.skills_box .skills_area ul li{margin-right: 46px;margin-top: 27px;}
+.skills_box .skills_area ul li p{text-align: center;margin-top: 14px;font-size: 1rem;}
+.about_me_area .skills_area .skills_content{font-size: 1rem;}
 @keyframes growProgressBar {
     0%, 33% { --pgPercentage: 0; }
     100% { --pgPercentage: var(--value); }
@@ -199,6 +230,9 @@ div[role="progressbar"]::before {counter-reset: percentage var(--value);content:
 
 .term_area{margin-top: 30px;font-size: 1rem;line-height: 1.5;}
 .term_area .term_title{font-weight: bold;}
+.epilog .term_area{margin-top: 30px;}
+.epilog .term_area .term_title{font-weight: bold;}
+.epilog .program_area .program_title{font-weight: bold;}
 .project3 .mockup_m{width: 139px;}
 
 .project5 .left .mockup_m{width: 297px;left: -15px;top: 137px;}
@@ -215,23 +249,26 @@ div[role="progressbar"]::before {counter-reset: percentage var(--value);content:
 .contact_area .contact_bottom li a{color: #fff;display: inline-block; vertical-align: middle;text-align: center;}
 .contact_area .contact_bottom .sns_area li a{padding: 10px;}
 .contact_area .contact_bottom .useful_link li i{margin-right: 10px;vertical-align: middle;}
+.contact_area .contact_bottom .sns_area li a i{color: #fff;margin: 14px 22px 0 0;}
+.contact_area .contact_bottom .useful_link li i{margin-right: 10px;}
+.contact_area .contact_bottom .useful_link li a{color: #fff;}
 @media screen and (max-width:1199px){
-  .side_nav_area{width: 17%;}
-  .inner{margin-left: 29%;}
-  .main_visual_area {display: block;position: relative;}
-  .main_visual_area .main_info .img_area{width: 85%;}
-  .main_visual_area .main_info .txt_box{position: absolute;background-color: rgba(255, 249, 247,.8);height: 346px;top: 261px;right: 40px;width: 37%;padding: 24px;}
-  .main_visual_area .main_info .txt_box .title_area{height: 346px;}
-  .about_me_area .profile .about_me_tit{padding-top: 21px;}
-  .education_area .box{width: 35%;margin-top: 2%;}
-  .education_area .education .edu h5{margin-top: 7%;}
-  .education_area .education .edu .txt_box{width: 90%;line-height: 1.2;}
-  .pro_area{padding-top: 5%;}
-  .mockup{width: 500px;top: 50px;}
-  .mockup a.hidden{width: 476px;height: 265px;top: 14px;left: 13px;}
-  .left{left:10%;}
-  .right{left: 50px;top: 420px;width: 100%;display: inline-block;}
-  .term_area_wrap{display: flex;align-items: center;}
-  .term_area_wrap .btn_wrap{padding-top: 30px;}
-  .contact_area .contact_content {margin-right: 0px;width: 500px;}
-}
+    .side_nav_area{width: 17%;}
+    .inner{margin-left: 29%;}
+    .main_visual_area {display: block;position: relative;}
+    .main_visual_area .main_info .img_area{width: 85%;}
+    .main_visual_area .main_info .txt_box{position: absolute;background-color: rgba(255, 249, 247,.8);height: 346px;top: 261px;right: 40px;width: 37%;padding: 24px;}
+    .main_visual_area .main_info .txt_box .title_area{height: 346px;}
+    .about_me_area .profile .about_me_tit{padding-top: 21px;}
+    .education_area .box{width: 35%;margin-top: 2%;}
+    .education_area .education .edu h5{margin-top: 7%;}
+    .education_area .education .edu .txt_box{width: 90%;line-height: 1.2;}
+    .pro_area{padding-top: 5%;}
+    .mockup{width: 500px;top: 50px;}
+    .mockup a.hidden{width: 476px;height: 265px;top: 14px;left: 13px;}
+    .left{left:10%;}
+    .right{left: 50px;top: 420px;width: 100%;display: inline-block;}
+    .term_area_wrap{display: flex;align-items: center;}
+    .term_area_wrap .btn_wrap{padding-top: 30px;}
+    .contact_area .contact_content {margin-right: 0px;width: 500px;}
+  }
