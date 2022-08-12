@@ -145,7 +145,7 @@ header{width: 100%;}
 .skills_area ul{display: flex;flex-wrap: wrap}
 .skills_area ul li{margin-right: 46px;margin-top: 27px;}
 .skills_area ul li p{text-align: center;margin-top: 14px;font-size: 1rem;}
-.about_me_area .education_box{width: 60%;}
+.about_me_area .education_box{width: 50%;}
 .about_me_area .education_area .edu_tit::after{content: '';display: block;width: 80%;height: 2px;border-radius: 30px;background: #fff;margin-top: 10px;}
 .skills_box{width: 40%;}
 .skills_box .skills_area .skills_tit::after,.education_area .prg_area .prg_tit::after{content: '';display: block;width: 100%;height: 2px;border-radius: 30px;background: #fff;margin-top: 10px;}
@@ -207,7 +207,7 @@ div[role="progressbar"]::before {counter-reset: percentage var(--value);content:
 /* 우측 프로젝트info */
 .project_info{position: relative;}
 .project_info>*{display: block;font-size:1.2vw;transition: all 1s;}
-.right{position: relative;left: 850px;top: 243px;width: 40%;max-width: 653px;}
+.right{position: relative;left: 800px;top: 243px;width: 40%;max-width: 653px;}
 .right .project_info .tit{font-size: 1.5rem;font-weight: bold;}
 .right .epilog{font-size: 1rem;margin-top: 16px;border-radius: 10px;line-height: 25px;width: 100%;}
 .right .epilog .term{margin-top: 25px;}
