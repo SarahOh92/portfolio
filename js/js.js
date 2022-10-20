@@ -1,13 +1,13 @@
 const topmenu = $("nav ul li");
 const sections = $(".section");
-const speed = 30;
+const speed = 600;
 topmenu.click(function (e) {
 	e.preventDefault();
 	let target = $(this); 
 	let index = target.index(); 
 	let section = $(".section").eq(index);
 	let offset = section.offset().top;
-	$("html, body").animate({ scrollTop: offset }, 2000, "easeOutCirc");
+	$("html, body").animate({ scrollTop: offset }, 500, "easeOutCirc");
 });
 $(window).on("scroll", function () {
 	let scrollTop = $(window).scrollTop()
